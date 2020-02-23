@@ -1,0 +1,11 @@
+UPLOADING:
+git init
+git add .
+git commit -m "first commit"--(git config --global user.email "sushithreddy21@gmail.com")--AGAIN
+git remote add origin https://github.com/Sushith04/My-Todo-App.git
+git push -u origin master
+
+PUBLISHING:
+npm install -g angular-cli-ghpages
+ng build --prod --base-href "https://Sushith04.github.io/My-Todo-App/"
+ngh --dir dist/Todo

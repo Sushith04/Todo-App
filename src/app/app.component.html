@@ -1,0 +1,38 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="height:100%;background:linear-gradient(to bottom, #4a33ff 0%, #ffdd33 100%);background-repeat: no-repeat;
+   background-attachment:fixed;
+   background-size: cover;">
+   <div class="container">
+     <div>
+      <h1><u>My Todo List</u></h1>
+     </div>
+     <div>
+     <input type="text" #newTodo placeholder="E.g.: Have to practice Javascript"/>
+     <button class="btn btn-primary" (click)="addTodo(newTodo.value); newTodo.value=''">Add</button><br>
+     <br></div>
+     <table>
+       <tr>
+         <th style="width:74%;">
+           TASK
+         </th>
+         <th colspan="2">STATUS<br>YES/NO</th>
+         <th>
+           DELETE
+         </th>
+       </tr>
+      <tr *ngFor="let todo of todos">
+        <td>{{todo.label}}</td>
+        <td>
+          <input type="radio" name=""/>
+        </td>
+        <td>
+          <input type="radio" name=""/>
+        </td>
+      <td>
+        <button style="width: 100%;vertical-align: middle;" class="material-icons md-18" (click)="deleteTodo(todo)">Delete</button>
+      </td>
+      </tr>
+    </table>
+  </div>
+    </body>
